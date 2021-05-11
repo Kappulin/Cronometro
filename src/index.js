@@ -3,8 +3,6 @@ import './css/componentes.css';
 let horas = 0;
 let minutos = 0;
 let segundos = 0;
-let milesimas = 0;
-const txtMilesimas = document.querySelector('#milesimas');
 const txtSegundos = document.querySelector('#segundos');
 const txtMinutos = document.querySelector('#minutos');
 const txtHoras = document.querySelector('#horas');
@@ -17,7 +15,7 @@ let intervalo;
 
 btnIniciar.addEventListener('click', () => {
     clearInterval(intervalo);
-    intervalo = setInterval(iniciaContador, 10);
+    intervalo = setInterval(iniciaContador, 1000);
 });
 
 btnParar.addEventListener('click', () => {
@@ -28,23 +26,15 @@ btnReiniciar.addEventListener('click', () => {
     horas = 0;
     minutos = 0;
     segundos = 0;
-    milesimas = 0;
     clearInterval(intervalo);
-    txtMilesimas.innerText = '00';
     txtSegundos.innerText = '00';
     txtMinutos.innerText = '00';
     txtHoras.innerText = '00';
 });
 
 const iniciaContador = () => {
-    milesimas++;
-    txtMilesimas.innerText = (milesimas <= 9) ? '0' + milesimas : milesimas;
-    if (milesimas > 99) {
-        segundos++;
-        txtSegundos.innerText = (segundos <= 9) ? '0' + segundos : segundos;
-        milesimas = 0;
-        txtMilesimas.innerText = "00";
-    }
+    segundos++;
+    txtSegundos.innerText = (segundos <= 9) ? '0' + segundos : segundos;
     if (segundos === 60) {
         minutos++;
         txtMinutos.innerText = (minutos <= 9) ? '0' + minutos : minutos;
