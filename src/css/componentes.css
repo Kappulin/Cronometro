@@ -1,0 +1,38 @@
+html, body{
+    margin: 0px;
+    background-color: #7665E0;
+}
+
+.titulo {
+    text-align: center;
+    color: #E0D587;
+    font-size: 65px;
+}
+
+.tiempos {
+    text-align: center;
+    position: relative;
+    font-size: 40px;
+    color:#61E05A;
+}
+
+#milesimas {
+    font-size: 30px;
+    color:#61E05A;
+}
+
+#div-botones {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+#btn-iniciar, #btn-parar, #btn-reiniciar {
+    font-size: 30px;
+    padding: 15px;
+    border: solid 2px;
+    margin:5px;
+    outline:none;
+    background-color: #BD70E0;
+    color:#E0D587;
+}
